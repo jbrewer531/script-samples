@@ -1,0 +1,1 @@
+Restart-Service "Zabbix Agent 2" -Force
