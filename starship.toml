@@ -1,0 +1,33 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Timeout for commands executed by starship (ms)
+command_timeout = 1000
+
+# newline between commands
+add_newline = true
+
+format = """
+$username$hostname:$directory
+$character
+"""
+
+[username]
+style_user = "green bold"
+style_root = "red bold"
+format = "[$user]($style)"
+disabled = false
+show_always = true
+
+[hostname]
+ssh_only = false
+format = "[@$hostname](green bold)"
+disabled = false
+
+[directory]
+truncation_length = 15
+truncation_symbol = "…/"
+truncate_to_repo = true
+
+[character]
+success_symbol = '[󰧂](bold blue) '
+error_symbol = '[✗](bold red) '
